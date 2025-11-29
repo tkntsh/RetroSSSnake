@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#0F380F">
+  <title>Retro SSSnake - Tech Stack</title>
+  <link rel="icon" type="image/jpeg" href="/webLogo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stack.css">
+</head>
+<body>
+  <div class="stack-container">
+    <!-- Animated Background Game -->
+    <div class="background-game">
+      <canvas id="bgCanvas"></canvas>
+    </div>
+
+    <!-- Content -->
+    <div class="stack-content">
+      <div class="stack-card">
+        <h1 class="stack-title">TECH STACK</h1>
+        
+        <div class="tech-section">
+          <h2 class="tech-category">⚡ Build Tool</h2>
+          <div class="tech-item">
+            <h3>Vite</h3>
+            <p>Lightning-fast build tool with instant HMR and optimized production builds. Perfect for modern web development.</p>
+          </div>
+        </div>
+
+        <div class="tech-section">
+          <h2 class="tech-category">🎮 Core Technologies</h2>
+          <div class="tech-item">
+            <h3>HTML5 Canvas</h3>
+            <p>Hardware-accelerated 2D rendering for smooth 60fps gameplay with pixel-perfect graphics.</p>
+          </div>
+          <div class="tech-item">
+            <h3>Vanilla JavaScript (ES6+)</h3>
+            <p>Pure JavaScript with modern features - no framework overhead, maximum performance.</p>
+          </div>
+          <div class="tech-item">
+            <h3>CSS3</h3>
+            <p>Modern CSS with custom properties, glassmorphism effects, and responsive design.</p>
+          </div>
+        </div>
+
+        <div class="tech-section">
+          <h2 class="tech-category">🎨 Design Features</h2>
+          <ul class="feature-list">
+            <li>Retro Game Boy color palette</li>
+            <li>Glassmorphism UI effects</li>
+            <li>Neon glow animations</li>
+            <li>Pixel-perfect retro fonts</li>
+            <li>Responsive mobile controls</li>
+            <li>Touch gesture support</li>
+          </ul>
+        </div>
+
+        <div class="tech-section">
+          <h2 class="tech-category">🚀 Game Features</h2>
+          <ul class="feature-list">
+            <li>Smooth 60fps gameplay loop</li>
+            <li>Gradient-colored snake segments</li>
+            <li>Particle explosion effects</li>
+            <li>Progressive difficulty scaling</li>
+            <li>LocalStorage high score persistence</li>
+            <li>Collision detection (walls + self)</li>
+            <li>Multi-platform input (keyboard, touch, D-pad)</li>
+          </ul>
+        </div>
+
+        <div class="tech-section">
+          <h2 class="tech-category">☁️ Deployment</h2>
+          <div class="tech-item">
+            <h3>Vercel</h3>
+            <p>Zero-config deployment with automatic builds, global CDN, and instant rollbacks. Optimized for static sites.</p>
+          </div>
+        </div>
+
+        <div class="tech-section">
+          <h2 class="tech-category">📦 Architecture</h2>
+          <ul class="feature-list">
+            <li><strong>Modular Design:</strong> Separate classes for Snake, Food, Particles, Controls, UI</li>
+            <li><strong>State Management:</strong> Clean game state transitions (Menu → Playing → Paused → Game Over)</li>
+            <li><strong>Event System:</strong> Custom event emitter for UI coordination</li>
+            <li><strong>Performance:</strong> RequestAnimationFrame loop with delta time calculations</li>
+          </ul>
+        </div>
+
+        <div class="button-group">
+          <a href="index.html" class="btn btn-primary">PLAY GAME</a>
+          <a href="https://github.com" class="btn" target="_blank" rel="noopener">VIEW SOURCE</a>
+        </div>
+
+        <div class="footer-text">
+          <p>Built with ❤️ using modern web technologies</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/stack-demo.js"></script>
+</body>
+</html>

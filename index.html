@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#0F380F">
+  <title>Retro SSSnake</title>
+  <link rel="icon" type="image/jpeg" href="/webLogo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <!-- Device Frame -->
+    <div class="device-frame">
+      <!-- Screen -->
+      <div class="screen">
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- Main Menu -->
+        <div id="mainMenu" class="menu active">
+          <h1 class="title">SNAKE</h1>
+          <div class="menu-buttons">
+            <button class="btn btn-primary" id="startBtn">START</button>
+            <button class="btn" id="howToPlayBtn">HOW TO PLAY</button>
+            <a href="stack.html" class="btn">STACK</a>
+          </div>
+          <div class="high-score-display">
+            <p>HIGH SCORE: <span id="menuHighScore">0</span></p>
+          </div>
+        </div>
+
+        <!-- How to Play Screen -->
+        <div id="howToPlayMenu" class="menu">
+          <h2 class="subtitle">HOW TO PLAY</h2>
+          <div class="instructions">
+            <p>• Use ARROW KEYS or WASD to move</p>
+            <p>• Swipe on mobile devices</p>
+            <p>• Eat food to grow and score</p>
+            <p>• Avoid walls and yourself</p>
+            <p>• Speed increases over time</p>
+            <p>• Press SPACE to pause</p>
+          </div>
+          <div class="menu-buttons">
+            <button class="btn btn-primary" id="backToMenuBtn">BACK</button>
+          </div>
+        </div>
+
+        <!-- Pause Menu -->
+        <div id="pauseMenu" class="menu overlay">
+          <h2 class="subtitle">PAUSE</h2>
+          <div class="score-info">
+            <p>SCORE: <span id="pauseScore">0</span></p>
+            <p>RECORD: <span id="pauseHighScore">0</span></p>
+          </div>
+          <div class="menu-buttons">
+            <button class="btn btn-primary" id="continueBtn">CONTINUE</button>
+            <button class="btn" id="restartBtn">RESTART</button>
+            <button class="btn" id="quitBtn">BACK TO MENU</button>
+          </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameOverMenu" class="menu overlay">
+          <h2 class="subtitle game-over-title">GAME OVER</h2>
+          <div class="score-info">
+            <p class="final-score">SCORE: <span id="finalScore">0</span></p>
+            <p id="newRecordText" class="new-record hidden">NEW RECORD!</p>
+            <p>HIGH SCORE: <span id="gameOverHighScore">0</span></p>
+          </div>
+          <div class="menu-buttons">
+            <button class="btn btn-primary" id="playAgainBtn">PLAY AGAIN</button>
+            <button class="btn" id="mainMenuBtn">MAIN MENU</button>
+          </div>
+        </div>
+
+        <!-- HUD (Score during gameplay) -->
+        <div id="hud" class="hud hidden">
+          <div class="hud-score">SCORE: <span id="currentScore">0</span></div>
+          <div class="hud-high-score">RECORD: <span id="hudHighScore">0</span></div>
+        </div>
+      </div>
+
+      <!-- Mobile Controls -->
+      <div class="mobile-controls" id="mobileControls">
+        <div class="dpad">
+          <button class="dpad-btn dpad-up" data-direction="up">▲</button>
+          <button class="dpad-btn dpad-left" data-direction="left">◄</button>
+          <button class="dpad-btn dpad-center"></button>
+          <button class="dpad-btn dpad-right" data-direction="right">►</button>
+          <button class="dpad-btn dpad-down" data-direction="down">▼</button>
+        </div>
+        <button class="pause-btn" id="mobilePauseBtn">⏸</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+/* Tech Stack Page Styles */
+
+.stack-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Animated Background Game */
+.background-game {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+#bgCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  image-rendering: pixelated;
+  filter: blur(2px);
+}
+
+/* Content */
+.stack-content {
+  position: relative;
+  z-index: 1;
+  padding: var(--spacing-lg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.stack-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 3px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 
+    0 0 40px rgba(57, 255, 20, 0.2),
+    inset 0 0 20px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Typography */
+.stack-title {
+  font-size: clamp(2rem, 6vw, 3rem);
+  color: var(--gb-lightest);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  text-shadow: 
+    3px 3px 0 var(--gb-dark),
+    0 0 20px var(--neon-green);
+  letter-spacing: 0.1em;
+}
+
+.tech-section {
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: rgba(48, 98, 48, 0.2);
+  border: 2px solid var(--gb-dark);
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+}
+
+.tech-section:hover {
+  background: rgba(48, 98, 48, 0.3);
+  border-color: var(--gb-light);
+  transform: translateX(5px);
+}
+
+.tech-category {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  color: var(--neon-green);
+  margin-bottom: var(--spacing-sm);
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.6);
+  letter-spacing: 0.05em;
+}
+
+.tech-item {
+  margin-bottom: var(--spacing-sm);
+}
+
+.tech-item h3 {
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+  color: var(--gb-lightest);
+  margin-bottom: var(--spacing-xs);
+  letter-spacing: 0.05em;
+}
+
+.tech-item p {
+  font-size: clamp(0.6rem, 2vw, 0.75rem);
+  color: var(--gb-light);
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Feature List */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-list li {
+  font-size: clamp(0.6rem, 2vw, 0.75rem);
+  color: var(--gb-light);
+  margin-bottom: var(--spacing-xs);
+  padding-left: var(--spacing-md);
+  position: relative;
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.feature-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--neon-green);
+  font-family: 'Press Start 2P', cursive;
+}
+
+.feature-list li strong {
+  color: var(--gb-lightest);
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.9em;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button-group .btn {
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Footer */
+.footer-text {
+  text-align: center;
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-md);
+  border-top: 2px solid var(--gb-dark);
+}
+
+.footer-text p {
+  font-size: clamp(0.5rem, 2vw, 0.7rem);
+  color: var(--gb-light);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stack-content {
+    padding: var(--spacing-sm);
+  }
+
+  .stack-card {
+    padding: var(--spacing-md);
+  }
+
+  .tech-section {
+    padding: var(--spacing-sm);
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .button-group .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .stack-title {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .tech-section {
+    margin-bottom: var(--spacing-md);
+  }
+}
